@@ -53,11 +53,11 @@ ul li {
 /* Navbar Styling */
 .navbar {
     display: flex;
-    justify-content: center;           /* Center the navbar content */
-    align-items: center;
-    background-color: #333;
-    height: 50px;                      /* Set a specific height for the navbar */
-    padding: 0 15px;                   /* Minimal horizontal padding */
+    justify-content: center;         /* Center the navbar content */
+    align-items: center;             /* Vertically center all navbar content */
+    background-color: #333;          /* Dark background for the navbar */
+    height: 50px;                    /* Set the desired height for the navbar */
+    padding: 0 15px;                 /* Horizontal padding only */
     position: sticky;
     top: 0;
     z-index: 1000;
@@ -67,9 +67,9 @@ ul li {
 .nav-links {
     display: flex;
     justify-content: center;
+    align-items: center;             /* Vertically center the links */
     list-style: none;
-    height: 100%;                      /* Ensure the links take up the full height */
-    align-items: center;                /* Center the links vertically */
+    height: 100%;                    /* Ensure nav links take the full navbar height */
 }
 
 .nav-links li {
@@ -91,10 +91,13 @@ ul li {
     display: none;
     flex-direction: column;
     cursor: pointer;
+    background-color: #333;          /* Dark background for the hamburger */
+    padding: 10px;                   /* Add padding around the hamburger */
+    border-radius: 5px;              /* Rounded corners for better styling */
     position: absolute;
     left: 15px;
-    top: 50%;                          /* Center the hamburger vertically */
-    transform: translateY(-50%);        /* Correct centering */
+    top: 50%;                        /* Vertically center the hamburger */
+    transform: translateY(-50%);      /* Correct vertical centering */
 }
 
 .hamburger span {
@@ -132,13 +135,14 @@ footer {
     color: white;
 }
 
+/* Mobile View */
 @media (max-width: 768px) {
     .hamburger {
-        display: flex;                 /* Show hamburger on mobile */
+        display: flex;               /* Show hamburger on mobile */
     }
 
     .nav-links {
-        display: none;                 /* Hide links initially on mobile */
+        display: none;               /* Hide links initially on mobile */
         flex-direction: column;
         background-color: #333;
         position: absolute;
@@ -149,7 +153,7 @@ footer {
     }
 
     .nav-links.active {
-        display: flex;                 /* Show links when hamburger is clicked */
+        display: flex;               /* Show links when hamburger is clicked */
     }
 
     .nav-links li {
