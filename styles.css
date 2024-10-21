@@ -53,7 +53,7 @@ ul li {
 /* Navbar Styling */
 .navbar {
     display: flex;
-    justify-content: center;       /* Center the navbar content on desktop */
+    justify-content: space-between;  /* Space hamburger and nav-links apart */
     align-items: center;
     background-color: #333;
     padding: 15px;
@@ -62,11 +62,11 @@ ul li {
     z-index: 1000;
 }
 
-/* Navigation Links */
 .nav-links {
     display: flex;
-    justify-content: center;       /* Center the nav-links on desktop */
+    justify-content: center;         /* Center the nav-links on desktop */
     list-style: none;
+    flex-grow: 1;                    /* Ensure nav-links take up remaining space */
 }
 
 .nav-links li {
@@ -86,12 +86,9 @@ ul li {
 
 /* Hamburger Menu */
 .hamburger {
-    display: none;                 /* Hidden on desktop, shown on mobile */
+    display: none;                   /* Hidden on desktop, visible on mobile */
     flex-direction: column;
     cursor: pointer;
-    position: absolute;            /* Position hamburger on the left */
-    left: 15px;                    /* Align hamburger to the left */
-    top: 15px;                     /* Vertical alignment */
 }
 
 .hamburger span {
@@ -129,14 +126,15 @@ footer {
     color: white;
 }
 
-/* Mobile View Styles */
+/* Mobile View */
 @media (max-width: 768px) {
     .hamburger {
-        display: flex;             /* Show hamburger on mobile */
+        display: flex;               /* Show hamburger on mobile */
+        margin-right: auto;          /* Align hamburger to the left */
     }
 
     .nav-links {
-        display: none;             /* Hide links initially on mobile */
+        display: none;               /* Hide links initially on mobile */
         flex-direction: column;
         background-color: #333;
         position: absolute;
@@ -147,7 +145,7 @@ footer {
     }
 
     .nav-links.active {
-        display: flex;             /* Show links when hamburger is clicked */
+        display: flex;               /* Show links when hamburger is clicked */
     }
 
     .nav-links li {
