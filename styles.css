@@ -53,11 +53,11 @@ ul li {
 /* Navbar Styling */
 .navbar {
     display: flex;
-    justify-content: center;         /* Center the navbar content */
-    align-items: center;             /* Vertically center all navbar content */
-    background-color: #333;          /* Dark background for the navbar */
-    height: 50px;                    /* Set the desired height for the navbar */
-    padding: 0 15px;                 /* Horizontal padding only */
+    justify-content: space-between;   /* Space out the hamburger and nav links */
+    align-items: center;              /* Vertically center both the hamburger and nav links */
+    background-color: #333;           /* Dark background for the navbar */
+    height: 50px;                     /* Set height for the navbar */
+    padding: 0 15px;                  /* Horizontal padding */
     position: sticky;
     top: 0;
     z-index: 1000;
@@ -66,10 +66,10 @@ ul li {
 /* Navigation Links */
 .nav-links {
     display: flex;
-    justify-content: center;
-    align-items: center;             /* Vertically center the links */
+    justify-content: center;          /* Center the nav links */
+    align-items: center;              /* Vertically center the nav links */
     list-style: none;
-    height: 100%;                    /* Ensure nav links take the full navbar height */
+    height: 100%;                     /* Make sure nav links take full navbar height */
 }
 
 .nav-links li {
@@ -90,14 +90,15 @@ ul li {
 .hamburger {
     display: none;
     flex-direction: column;
+    justify-content: center;          /* Vertically center the hamburger lines */
     cursor: pointer;
-    background-color: #333;          /* Dark background for the hamburger */
-    padding: 10px;                   /* Add padding around the hamburger */
-    border-radius: 5px;              /* Rounded corners for better styling */
+    background-color: #333;           /* Dark background for the hamburger */
+    padding: 10px;
+    border-radius: 5px;               /* Rounded corners for better style */
     position: absolute;
-    left: 15px;
-    top: 50%;                        /* Vertically center the hamburger */
-    transform: translateY(-50%);      /* Correct vertical centering */
+    left: 15px;                       /* Keep hamburger aligned left */
+    top: 50%;                         /* Vertically center the hamburger */
+    transform: translateY(-50%);       /* Correct centering */
 }
 
 .hamburger span {
@@ -105,6 +106,7 @@ ul li {
     height: 3px;
     background-color: white;
     margin: 4px;
+    transition: all 0.3s ease;
 }
 
 
@@ -138,11 +140,11 @@ footer {
 /* Mobile View */
 @media (max-width: 768px) {
     .hamburger {
-        display: flex;               /* Show hamburger on mobile */
+        display: flex;                /* Show hamburger on mobile */
     }
 
     .nav-links {
-        display: none;               /* Hide links initially on mobile */
+        display: none;                /* Hide links initially on mobile */
         flex-direction: column;
         background-color: #333;
         position: absolute;
@@ -153,14 +155,13 @@ footer {
     }
 
     .nav-links.active {
-        display: flex;               /* Show links when hamburger is clicked */
+        display: flex;                /* Show links when hamburger is clicked */
     }
 
     .nav-links li {
         margin: 10px 0;
     }
 }
-
     section {
         padding: 30px 10px;
         margin-bottom: 30px;
