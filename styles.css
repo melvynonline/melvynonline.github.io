@@ -50,45 +50,15 @@ ul li {
     margin-bottom: 10px;
 }
 
-/* Navbar Styling */
-.navbar {
-    display: flex;
-    justify-content: space-between;  /* Space hamburger and nav-links apart */
-    align-items: center;
-    background-color: #333;
-    padding: 15px;
-    position: sticky;
-    top: 0;
-    z-index: 1000;
-}
-
-.nav-links {
-    display: flex;
-    justify-content: center;         /* Center the nav-links on desktop */
-    list-style: none;
-    flex-grow: 1;                    /* Ensure nav-links take up remaining space */
-}
-
-.nav-links li {
-    margin-left: 20px;
-}
-
-.nav-links a {
-    color: white;
-    text-decoration: none;
-    padding: 10px;
-}
-
-.nav-links a:hover {
-    color: #f4b400;
-}
-
-
 /* Hamburger Menu */
 .hamburger {
-    display: none;                   /* Hidden on desktop, visible on mobile */
+    display: none;
     flex-direction: column;
     cursor: pointer;
+    position: absolute;
+    left: 15px;
+    top: 15px;
+    z-index: 1001; /* Ensure it stays above other elements */
 }
 
 .hamburger span {
@@ -96,7 +66,20 @@ ul li {
     height: 3px;
     background-color: white;
     margin: 4px;
-    transition: all 0.3s ease;
+    transition: all 0.3s ease; /* Smooth transition for the lines */
+}
+
+/* Animation for hamburger when active (transform to X) */
+.nav-links.active ~ .hamburger span:nth-child(1) {
+    transform: rotate(45deg) translate(5px, 5px); /* First bar becomes part of X */
+}
+
+.nav-links.active ~ .hamburger span:nth-child(2) {
+    opacity: 0; /* Middle bar disappears */
+}
+
+.nav-links.active ~ .hamburger span:nth-child(3) {
+    transform: rotate(-45deg) translate(5px, -5px); /* Third bar becomes part of X */
 }
 
 /* Hero Section */
@@ -129,9 +112,9 @@ footer {
 /* Mobile View */
 @media (max-width: 768px) {
     .hamburger {
-        display: flex;               /* Show hamburger on mobile */
-        margin-right: auto;          /* Align hamburger to the left */
+        display: flex; /* Show hamburger on mobile */
     }
+}
 
     .nav-links {
         display: none;               /* Hide links initially on mobile */
