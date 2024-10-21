@@ -53,7 +53,7 @@ ul li {
 /* Navbar Styling */
 .navbar {
     display: flex;
-    justify-content: space-between;
+    justify-content: space-between;  /* Space hamburger and nav-links apart */
     align-items: center;
     background-color: #333;
     padding: 15px;
@@ -64,8 +64,9 @@ ul li {
 
 .nav-links {
     display: flex;
-    justify-content: center;
+    justify-content: center;         /* Center the nav-links on desktop */
     list-style: none;
+    flex-grow: 1;                    /* Ensure nav-links take up remaining space */
 }
 
 .nav-links li {
@@ -82,9 +83,10 @@ ul li {
     color: #f4b400;
 }
 
+
 /* Hamburger Menu */
 .hamburger {
-    display: none;
+    display: none;                   /* Hidden on desktop, visible on mobile */
     flex-direction: column;
     cursor: pointer;
 }
@@ -125,13 +127,15 @@ footer {
 }
 
 /* Mobile View Styles */
+/* Mobile View */
 @media (max-width: 768px) {
     .hamburger {
-        display: flex;
+        display: flex;               /* Show hamburger on mobile */
+        margin-right: auto;          /* Align hamburger to the left */
     }
 
     .nav-links {
-        display: none;
+        display: none;               /* Hide links initially on mobile */
         flex-direction: column;
         background-color: #333;
         position: absolute;
@@ -142,7 +146,7 @@ footer {
     }
 
     .nav-links.active {
-        display: flex;
+        display: flex;               /* Show links when hamburger is clicked */
     }
 
     .nav-links li {
