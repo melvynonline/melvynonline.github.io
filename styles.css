@@ -59,10 +59,19 @@ nav ul li a:hover {
     flex-wrap: wrap;
 }
 
-.profile-picture {
-    border-radius: 50%;
+.portrait-wrapper {
     width: 200px;
-    margin-right: 20px;
+    height: 200px;
+    border-radius: 50%;            /* Ensure the wrapper is circular */
+    overflow: hidden;              /* Make sure the image fits within the circle */
+    margin: 0 auto 20px auto;      /* Center the wrapper and add margin */
+}
+
+.portrait {
+    width: 100%;                   /* Make the image fill the wrapper */
+    height: 100%;                  /* Make the image fill the wrapper */
+    object-fit: cover;              /* Ensure the image fills the wrapper while maintaining its aspect ratio */
+    display: block;                /* Ensure the image is a block element */
 }
 
 .about-content p {
