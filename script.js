@@ -1,4 +1,3 @@
-
 const hamburger = document.getElementById('hamburger');
 const navLinks = document.getElementById('nav-links');
 const links = document.querySelectorAll('.nav-links li'); // Select all the links
