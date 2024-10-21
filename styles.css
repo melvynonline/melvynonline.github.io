@@ -51,7 +51,6 @@ ul li {
 }
 
 /* Navbar Styling */
-/* Navbar Styling */
 .navbar {
     display: flex;
     justify-content: center;       /* Center the navbar content on desktop */
@@ -83,6 +82,7 @@ ul li {
 .nav-links a:hover {
     color: #f4b400;
 }
+
 
 /* Hamburger Menu */
 .hamburger {
@@ -130,7 +130,6 @@ footer {
 }
 
 /* Mobile View Styles */
-/* Mobile View */
 @media (max-width: 768px) {
     .hamburger {
         display: flex;             /* Show hamburger on mobile */
