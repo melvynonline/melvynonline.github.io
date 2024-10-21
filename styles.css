@@ -86,13 +86,12 @@ ul li {
 
 /* Hamburger Menu */
 .hamburger {
-    display: none;
+    display: none;                 /* Hidden on desktop, shown on mobile */
     flex-direction: column;
     cursor: pointer;
-    position: absolute;
-    left: 15px;
-    top: 15px;
-    z-index: 1001; /* Ensure it stays above other elements */
+    position: absolute;            /* Position hamburger on the left */
+    left: 15px;                    /* Align hamburger to the left */
+    top: 15px;                     /* Vertical alignment */
 }
 
 .hamburger span {
@@ -100,20 +99,7 @@ ul li {
     height: 3px;
     background-color: white;
     margin: 4px;
-    transition: all 0.3s ease; /* Smooth transition for the lines */
-}
-
-/* Animation for hamburger when active (transform to X) */
-.nav-links.active ~ .hamburger span:nth-child(1) {
-    transform: rotate(45deg) translate(5px, 5px); /* First bar becomes part of X */
-}
-
-.nav-links.active ~ .hamburger span:nth-child(2) {
-    opacity: 0; /* Middle bar disappears */
-}
-
-.nav-links.active ~ .hamburger span:nth-child(3) {
-    transform: rotate(-45deg) translate(5px, -5px); /* Third bar becomes part of X */
+    transition: all 0.3s ease;
 }
 
 /* Hero Section */
@@ -149,7 +135,6 @@ footer {
     .hamburger {
         display: flex;             /* Show hamburger on mobile */
     }
-}
 
     .nav-links {
         display: none;             /* Hide links initially on mobile */
