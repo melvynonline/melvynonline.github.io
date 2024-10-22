@@ -88,6 +88,11 @@ ul li {
     flex-direction: column;
     justify-content: start;
     cursor: pointer;
+    position: absolute;
+    left: 15px;                       /* Align hamburger to the left */
+    top: 50%;                         /* Vertically center hamburger */
+    transform: translateY(-50%);       /* Ensure it is properly centered vertically */
+
 }
 
 .hamburger span {
