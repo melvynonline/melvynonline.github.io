@@ -51,14 +51,13 @@ ul li {
 }
 
 /* Navbar Styling */
-/* Navbar Styling */
 .navbar {
     display: flex;
-    justify-content: space-between;   /* Space hamburger and nav links */
-    align-items: center;              /* Vertically center both hamburger and links */
-    background-color: #333;           /* Dark background for the navbar */
-    height: 50px;                     /* Set height for the navbar */
-    padding: 0 15px;                  /* Horizontal padding */
+    justify-content: space-between;      /* Space hamburger and nav links */
+    align-items: center;                 /* Vertically center both hamburger and links */
+    background-color: #333;              /* Dark background for the navbar */
+    height: 50px;                        /* Set height for the navbar */
+    padding: 0 15px;                     /* Horizontal padding */
     position: sticky;
     top: 0;
     z-index: 1000;
@@ -67,10 +66,11 @@ ul li {
 /* Navigation Links Styling */
 .nav-links {
     display: flex;
-    justify-content: center;          /* Center the nav links horizontally */
-    align-items: center;              /* Vertically center the links */
+    justify-content: center;             /* Center the nav links horizontally */
+    align-items: center;                 /* Vertically center the links */
     list-style: none;
-    flex-grow: 1;                     /* Make nav links take available space */
+    flex-grow: 1;                        /* Make nav links take available space */
+    height: 100%;                        /* Make nav links full height to match the navbar */
 }
 
 .nav-links li {
@@ -89,22 +89,24 @@ ul li {
 
 /* Hamburger Menu Styling */
 .hamburger {
-    display: none;                    /* Hidden on desktop */
-    flex-direction: column;           /* Stack lines vertically */
+    display: none;                       /* Hidden on desktop */
+    flex-direction: column;              /* Stack lines vertically */
     cursor: pointer;
-    position: absolute;
-    left: 15px;                       /* Align hamburger to the left */
-    top: 50%;                         /* Vertically center the hamburger */
-    transform: translateY(-50%);       /* Adjust for proper centering */
+    position: relative;                  /* Stay relative within navbar */
+    left: 0;                             /* Align hamburger to the left */
+    top: 0;                              /* Adjust top to keep it centered */
+    justify-content: center;             /* Vertically center the hamburger lines */
+    height: 100%;                        /* Match the height of the navbar */
 }
 
 .hamburger span {
     width: 25px;
     height: 3px;
     background-color: white;
-    margin: 4px;
-    align-self: flex-start;           /* Align hamburger lines to the left */
+    margin: 4px 0;
+    align-self: flex-start;              /* Align hamburger lines to the left */
 }
+
 
 
 
@@ -136,31 +138,14 @@ footer {
     color: white;
 }
 
-/* Mobile View */
-/* Mobile View */
-@media (max-width: 768px) {
-    .hamburger {
-        display: flex;                /* Show hamburger on mobile */
-    }
-
-    .nav-links {
-        display: none;                /* Hide links initially on mobile */
-        flex-direction: column;       /* Stack links vertically */
-        background-color: #333;
-        position: absolute;
-        top: 50px;
-        left: 0;
-        width: 100%;
-        padding: 1rem;
-    }
 
     .nav-links.active {
-        display: flex;                /* Show links when hamburger is clicked */
+        display: flex;                   /* Show links when hamburger is clicked */
     }
 
     /* Dark background for the hamburger when the menu is open */
     .hamburger.active {
-        background-color: #333;       /* Dark background for hamburger when active */
+        background-color: #333;          /* Dark background for hamburger when active */
         padding: 10px;
         border-radius: 5px;
     }
