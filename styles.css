@@ -62,6 +62,10 @@ ul li {
     z-index: 1000;
 }
 
+.navbar .navbar-nav > li > a {
+line-height: 45px;
+ }
+
 .nav-links {
     display: flex;
     justify-content: center;
