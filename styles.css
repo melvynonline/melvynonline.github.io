@@ -53,24 +53,19 @@ ul li {
 /* Navbar Styling */
 .navbar {
     display: flex;
-    justify-content: space-between;      /* Space hamburger and nav links */
-    align-items: center;                 /* Vertically center both hamburger and links */
-    background-color: #333;              /* Dark background for the navbar */
-    height: 50px;                        /* Set height for the navbar */
-    padding: 0 15px;                     /* Horizontal padding */
+    justify-content: space-between;
+    align-items: center;
+    background-color: #333;
+    padding: 15px;
     position: sticky;
     top: 0;
     z-index: 1000;
 }
 
-/* Navigation Links Styling */
 .nav-links {
     display: flex;
-    justify-content: center;             /* Center the nav links horizontally */
-    align-items: center;                 /* Vertically center the links */
+    justify-content: center;
     list-style: none;
-    flex-grow: 1;                        /* Make nav links take available space */
-    height: 100%;                        /* Make nav links full height to match the navbar */
 }
 
 .nav-links li {
@@ -87,29 +82,20 @@ ul li {
     color: #f4b400;
 }
 
-/* Hamburger Menu Styling */
+/* Hamburger Menu */
 .hamburger {
-    display: none;                       /* Hidden on desktop */
-    flex-direction: column;              /* Stack lines vertically */
+    display: none;
+    flex-direction: column;
     cursor: pointer;
-    position: relative;                  /* Stay relative within navbar */
-    left: 0;                             /* Align hamburger to the left */
-    top: 0;                              /* Adjust top to keep it centered */
-    justify-content: center;             /* Vertically center the hamburger lines */
-    height: 100%;                        /* Match the height of the navbar */
 }
 
 .hamburger span {
     width: 25px;
     height: 3px;
     background-color: white;
-    margin: 4px 0;
-    align-self: flex-start;              /* Align hamburger lines to the left */
+    margin: 4px;
+    transition: all 0.3s ease;
 }
-
-
-
-
 
 /* Hero Section */
 .hero {
@@ -138,22 +124,31 @@ footer {
     color: white;
 }
 
-
-    .nav-links.active {
-        display: flex;                   /* Show links when hamburger is clicked */
+/* Mobile View Styles */
+@media (max-width: 768px) {
+    .hamburger {
+        display: flex;
     }
 
-    /* Dark background for the hamburger when the menu is open */
-    .hamburger.active {
-        background-color: #333;          /* Dark background for hamburger when active */
-        padding: 10px;
-        border-radius: 5px;
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        background-color: #333;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        width: 100%;
+        padding: 1rem;
+    }
+
+    .nav-links.active {
+        display: flex;
     }
 
     .nav-links li {
         margin: 10px 0;
     }
-}
+
     section {
         padding: 30px 10px;
         margin-bottom: 30px;
