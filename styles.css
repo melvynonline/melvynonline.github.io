@@ -86,6 +86,7 @@ ul li {
 .hamburger {
     display: none;
     flex-direction: column;
+    justify-content: start;
     cursor: pointer;
 }
 
