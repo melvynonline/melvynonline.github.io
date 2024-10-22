@@ -60,6 +60,8 @@ ul li {
     position: sticky;
     top: 0;
     z-index: 1000;
+    top: 50%;                         /* Vertically center hamburger */
+    transform: translateY(-50%);       /* Ensure it is properly centered vertically */
 }
 
 .nav-links {
