@@ -53,9 +53,9 @@ ul li {
 /* Navbar Styling */
 .navbar {
     display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: #333;
+    justify-content: space-between;   /* Space out hamburger and nav links */
+    align-items: center;              /* Vertically center both hamburger and links */
+    background-color: #333;           /* Dark background for the navbar */
     height: 40px;                     /* Reduced height for the navbar */
     padding: 0 15px;                  /* Minimal horizontal padding */
     position: sticky;
@@ -63,10 +63,14 @@ ul li {
     z-index: 1000;
 }
 
+/* Navigation Links Styling */
 .nav-links {
     display: flex;
-    justify-content: center;
+    justify-content: center;          /* Center the nav links horizontally */
+    align-items: center;              /* Vertically center the links */
     list-style: none;
+    flex-grow: 1;                     /* Make nav links take available space */
+    height: 100%;                     /* Make nav links full height to match the navbar */
 }
 
 .nav-links li {
@@ -76,7 +80,7 @@ ul li {
 .nav-links a {
     color: white;
     text-decoration: none;
-    padding: 10px;
+    padding: 5px;                     /* Reduced padding for the nav links */
 }
 
 .nav-links a:hover {
