@@ -87,7 +87,7 @@ ul li {
     display: none;
     flex-direction: column;
     justify-content: start;
-    cursor: hand;
+    cursor: pointer;
 }
 
 .hamburger span {
