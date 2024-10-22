@@ -54,10 +54,10 @@ ul li {
 .navbar {
     display: flex;
     justify-content: space-between;    /* Space out hamburger and nav links */
-    align-items: center;               /* Vertically center all items */
+    align-items: center;               /* Vertically center both hamburger and nav links */
     background-color: #333;            /* Dark background for the navbar */
-    height: 50px;                      /* Set fixed height for the navbar */
-    padding: 0 15px;                   /* Minimal horizontal padding */
+    height: 50px;                      /* Set a fixed height for the navbar */
+    padding: 0 15px;                   /* Horizontal padding */
     position: sticky;
     top: 0;
     z-index: 1000;
@@ -79,10 +79,10 @@ ul li {
 .nav-links a {
     color: white;
     text-decoration: none;
-    padding: 0 10px;                   /* Reduced horizontal padding */
-    display: flex;                     /* Use flexbox to align text */
+    padding: 0 10px;                   /* Horizontal padding for links */
+    display: inline-flex;              /* Use inline-flex for precise centering */
     align-items: center;               /* Vertically center text within the links */
-    height: 100%;                      /* Full height to match navbar */
+    height: 50px;                      /* Ensure links match the navbar height */
 }
 
 .nav-links a:hover {
@@ -97,7 +97,7 @@ ul li {
     position: absolute;
     left: 15px;                        /* Align hamburger to the left */
     top: 50%;                          /* Vertically center the hamburger */
-    transform: translateY(-50%);        /* Adjust for proper centering */
+    transform: translateY(-50%);        /* Ensure proper vertical centering */
     justify-content: center;
     height: 50px;                      /* Match the height of the navbar */
 }
