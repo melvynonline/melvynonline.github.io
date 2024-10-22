@@ -99,10 +99,10 @@ ul li {
 
 .hamburger span {
     width: 25px;
-    height: 2px;
+    height: 4px;
     background-color: white;
-    margin: 2px;
-    transition: all 0.3s ease;
+    margin: 3px;
+    transition: all 0.5s ease;
 }
 
 /* Hero Section */
