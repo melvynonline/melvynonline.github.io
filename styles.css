@@ -80,7 +80,10 @@ ul li {
 .nav-links a {
     color: white;
     text-decoration: none;
-    padding: 5px;                     /* Reduced padding for the nav links */
+    padding: 0 10px;                   /* Horizontal padding */
+    display: flex;                     /* Use flexbox for better centering */
+    align-items: center;               /* Vertically center text inside the links */
+    height: 100%;                      /* Match the height of the navbar */
 }
 
 .nav-links a:hover {
