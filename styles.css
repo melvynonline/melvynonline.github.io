@@ -53,23 +53,19 @@ ul li {
 /* Navbar Styling */
 .navbar {
     display: flex;
-    justify-content: space-between;    /* Space out hamburger and nav links */
-    align-items: center;               /* Vertically center both hamburger and nav links */
-    background-color: #333;            /* Dark background for the navbar */
-    height: 50px;                      /* Set a fixed height for the navbar */
-    padding: 0 15px;                   /* Horizontal padding */
+    justify-content: center;
+    align-items: center;
+    background-color: #333;
+    padding: 15px;
     position: sticky;
     top: 0;
     z-index: 1000;
 }
 
-/* Navigation Links Styling */
 .nav-links {
     display: flex;
-    justify-content: center;           /* Center the nav links horizontally */
-    align-items: center;               /* Vertically center the nav links */
+    justify-content: center;
     list-style: none;
-    flex-grow: 1;                      /* Make nav links take available space */
 }
 
 .nav-links li {
@@ -79,35 +75,32 @@ ul li {
 .nav-links a {
     color: white;
     text-decoration: none;
-    padding: 0 10px;                   /* Horizontal padding for links */
-    display: inline-flex;              /* Use inline-flex for precise centering */
-    align-items: center;               /* Vertically center text within the links */
-    height: 50px;                      /* Ensure links match the navbar height */
+    padding: 10px;
 }
 
 .nav-links a:hover {
     color: #f4b400;
 }
 
-/* Hamburger Menu Styling */
+/* Hamburger Menu */
 .hamburger {
-    display: none;                     /* Hidden on desktop */
-    flex-direction: column;            /* Stack lines vertically */
+    display: none;
+    flex-direction: column;
+    justify-content: start;
     cursor: pointer;
     position: absolute;
-    left: 15px;                        /* Align hamburger to the left */
-    top: 50%;                          /* Vertically center the hamburger */
-    transform: translateY(-50%);        /* Ensure proper vertical centering */
-    justify-content: center;
-    height: 50px;                      /* Match the height of the navbar */
+    left: 15px;                       /* Align hamburger to the left */
+    top: 50%;                         /* Vertically center hamburger */
+    transform: translateY(-50%);       /* Ensure it is properly centered vertically */
+
 }
 
 .hamburger span {
     width: 25px;
     height: 3px;
     background-color: white;
-    margin: 4px 0;
-    align-self: flex-start;            /* Align hamburger lines to the left */
+    margin: 3px;
+    transition: all 0.5s ease;
 }
 
 /* Hero Section */
@@ -137,37 +130,31 @@ footer {
     color: white;
 }
 
-/* Mobile View */
+/* Mobile View Styles */
 @media (max-width: 768px) {
     .hamburger {
-        display: flex;                 /* Show hamburger on mobile */
+        display: flex;
     }
 
     .nav-links {
-        display: none;                 /* Hide links initially on mobile */
-        flex-direction: column;        /* Stack links vertically */
+        display: none;
+        flex-direction: column;
         background-color: #333;
         position: absolute;
-        top: 50px;                     /* Align with navbar */
+        top: 60px;
         left: 0;
         width: 100%;
         padding: 1rem;
     }
 
     .nav-links.active {
-        display: flex;                 /* Show links when hamburger is clicked */
-    }
-
-    .hamburger.active {
-        background-color: #333;        /* Dark background for hamburger when active */
-        padding: 10px;
-        border-radius: 5px;
+        display: flex;
     }
 
     .nav-links li {
         margin: 10px 0;
     }
-}
+
     section {
         padding: 30px 10px;
         margin-bottom: 30px;
