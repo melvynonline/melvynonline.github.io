@@ -50,29 +50,27 @@ ul li {
     margin-bottom: 10px;
 }
 
-/* Navbar Styling */
+/* General Navbar Styling */
 .navbar {
     display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: #333;
-    height: 50px;                      /* Fixed height for the navbar */
-    padding: 0 15px;
+    justify-content: space-between;    /* Space between hamburger and nav links */
+    align-items: center;               /* Vertically center everything */
+    background-color: #333;            /* Dark background */
+    height: 60px;                      /* Set fixed height */
+    padding: 0 15px;                   /* Horizontal padding */
     position: sticky;
     top: 0;
+    width: 100%;                       /* Full width */
     z-index: 1000;
-    width: 100%;
 }
-
 
 /* Navigation Links Styling */
 .nav-links {
     display: flex;
-    justify-content: center;           /* Center the nav links horizontally */
-    align-items: center;               /* Vertically center the nav links */
+    justify-content: center;           /* Center the links horizontally */
+    align-items: center;               /* Vertically center the links */
     list-style: none;
-    flex-grow: 1;                      /* Make nav links take available space */
-    height: 100%;                      /* Ensure full height of nav links */
+    flex-grow: 1;                      /* Allow links to grow and fill the navbar space */
 }
 
 .nav-links li {
@@ -82,37 +80,35 @@ ul li {
 .nav-links a {
     color: white;
     text-decoration: none;
-    padding: 0 10px;                   /* Horizontal padding for links */
-    display: inline-flex;              /* Use inline-flex for precise centering */
-    align-items: center;               /* Vertically center text within the links */
-    height: 100%;                      /* Match the navbar height */
+    padding: 10px 15px;                /* Add padding for spacing */
+    display: inline-flex;              /* Inline-flex for consistent vertical centering */
+    align-items: center;               /* Vertically center the text inside the links */
+    height: 100%;                      /* Full height matching the navbar */
 }
-
 
 .nav-links a:hover {
     color: #f4b400;
 }
 
-/* Hamburger Menu */
+/* Hamburger Menu Styling */
 .hamburger {
-    display: none;
-    flex-direction: column;
-    justify-content: start;
+    display: none;                     /* Hidden on desktop */
+    flex-direction: column;            /* Stack hamburger lines vertically */
+    justify-content: center;           /* Vertically center the lines */
     cursor: pointer;
-    position: absolute;
-    left: 15px;                       /* Align hamburger to the left */
-    top: 50%;                         /* Vertically center hamburger */
-    transform: translateY(-50%);       /* Ensure it is properly centered vertically */
-
+    position: relative;
+    left: 0;
+    height: 60px;                      /* Match navbar height */
 }
 
 .hamburger span {
     width: 25px;
     height: 3px;
     background-color: white;
-    margin: 3px;
-    transition: all 0.5s ease;
+    margin: 4px 0;
 }
+
+
 
 /* Hero Section */
 .hero {
@@ -141,30 +137,31 @@ footer {
     color: white;
 }
 
-/* Mobile View Styles */
+/* Mobile View */
 @media (max-width: 768px) {
     .hamburger {
-        display: flex;
+        display: flex;                 /* Show hamburger menu on mobile */
     }
 
     .nav-links {
-        display: none;
-        flex-direction: column;
-        background-color: #333;
+        display: none;                 /* Hide nav links initially on mobile */
+        flex-direction: column;        /* Stack nav links vertically */
+        background-color: #333;        /* Dark background for the mobile menu */
         position: absolute;
-        top: 40px;
+        top: 60px;                     /* Match navbar height */
         left: 0;
-        width: 50%;
-        padding: 1rem;
+        width: 100%;
+        padding: 1rem 0;
     }
 
     .nav-links.active {
-        display: flex;
+        display: flex;                 /* Show nav links when menu is open */
     }
 
     .nav-links li {
         margin: 10px 0;
     }
+}
 
     section {
         padding: 30px 10px;
