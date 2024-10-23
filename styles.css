@@ -52,7 +52,7 @@ ul li {
 
 /* Navbar Styling */
 .navbar {
-    display: flex-shrink;
+    display: flex;
     justify-content: center;
     align-items: center;
     background-color: #333;
