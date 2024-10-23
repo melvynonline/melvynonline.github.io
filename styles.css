@@ -56,10 +56,12 @@ ul li {
     justify-content: center;
     align-items: center;
     background-color: #333;
-    padding: 5px;
+    height: 50px;                      /* Fixed height for the navbar */
+    padding: 0 15px;
     position: sticky;
     top: 0;
     z-index: 1000;
+    width: 100%;
 }
 
 
