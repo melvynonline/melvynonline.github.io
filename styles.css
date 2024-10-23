@@ -56,9 +56,9 @@ ul li {
     justify-content: center;
     align-items: center;
     background-color: #333;
-    padding: 15px;
+    padding: 25px;
     position: sticky;
-    top: 15px;
+    top: 0;
     z-index: 1000;
 }
 
