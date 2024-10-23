@@ -57,7 +57,7 @@ ul li {
     justify-content: center;
     align-items: center;
     background-color: #333;
-    padding: 1em 0;
+    padding: 15px;
     position: sticky;
     top: 0;
     z-index: 1000;
@@ -145,7 +145,7 @@ footer {
         top: 30px;
         left: 0;
         width: 50%;
-        padding: 1rem;
+        padding: 15px;
     }
 
     .nav-links.active {
