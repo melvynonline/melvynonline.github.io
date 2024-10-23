@@ -62,7 +62,7 @@ ul li {
     z-index: 1000;
 }
 
-.navbar .navbar-nav > li > a {
+.navbar > li > a {
 line-height: 10px;
  }
 
