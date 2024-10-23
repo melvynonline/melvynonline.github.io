@@ -65,10 +65,14 @@ ul li {
 }
 
 
+/* Navigation Links Styling */
 .nav-links {
     display: flex;
-    justify-content: center;
+    justify-content: center;           /* Center the nav links horizontally */
+    align-items: center;               /* Vertically center the nav links */
     list-style: none;
+    flex-grow: 1;                      /* Make nav links take available space */
+    height: 100%;                      /* Ensure full height of nav links */
 }
 
 .nav-links li {
@@ -78,8 +82,12 @@ ul li {
 .nav-links a {
     color: white;
     text-decoration: none;
-    padding: 10px;
+    padding: 0 10px;                   /* Horizontal padding for links */
+    display: inline-flex;              /* Use inline-flex for precise centering */
+    align-items: center;               /* Vertically center text within the links */
+    height: 100%;                      /* Match the navbar height */
 }
+
 
 .nav-links a:hover {
     color: #f4b400;
