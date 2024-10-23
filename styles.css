@@ -1,3 +1,4 @@
+
 /* General Styles */
 * {
     margin: 0;
@@ -50,27 +51,26 @@ ul li {
     margin-bottom: 10px;
 }
 
-/* General Navbar Styling */
+/* Navbar Styling */
 .navbar {
     display: flex;
-    justify-content: space-between;    /* Space between hamburger and nav links */
-    align-items: center;               /* Vertically center everything */
-    background-color: #333;            /* Dark background */
-    height: 60px;                      /* Set fixed height */
-    padding: 0 15px;                   /* Horizontal padding */
+    justify-content: center;
+    align-items: center;
+    background-color: #333;
+    padding: 15px;
     position: sticky;
     top: 0;
-    width: 100%;                       /* Full width */
     z-index: 1000;
 }
 
-/* Navigation Links Styling */
+.navbar .navbar-nav > li > a {
+line-height: 25px;
+ }
+
 .nav-links {
     display: flex;
-    justify-content: center;           /* Center the links horizontally */
-    align-items: center;               /* Vertically center the links */
+    justify-content: center;
     list-style: none;
-    flex-grow: 1;                      /* Allow links to grow and fill the navbar space */
 }
 
 .nav-links li {
@@ -80,35 +80,33 @@ ul li {
 .nav-links a {
     color: white;
     text-decoration: none;
-    padding: 10px 15px;                /* Add padding for spacing */
-    display: inline-flex;              /* Inline-flex for consistent vertical centering */
-    align-items: center;               /* Vertically center the text inside the links */
-    height: 100%;                      /* Full height matching the navbar */
+    padding: 10px;
 }
 
 .nav-links a:hover {
     color: #f4b400;
 }
 
-/* Hamburger Menu Styling */
+/* Hamburger Menu */
 .hamburger {
-    display: none;                     /* Hidden on desktop */
-    flex-direction: column;            /* Stack hamburger lines vertically */
-    justify-content: center;           /* Vertically center the lines */
+    display: none;
+    flex-direction: column;
+    justify-content: start;
     cursor: pointer;
-    position: relative;
-    left: 0;
-    height: 60px;                      /* Match navbar height */
+    position: absolute;
+    left: 15px;                       /* Align hamburger to the left */
+    top: 50%;                         /* Vertically center hamburger */
+    transform: translateY(-50%);       /* Ensure it is properly centered vertically */
+
 }
 
 .hamburger span {
     width: 25px;
     height: 3px;
     background-color: white;
-    margin: 4px 0;
+    margin: 3px;
+    transition: all 0.5s ease;
 }
-
-
 
 /* Hero Section */
 .hero {
@@ -137,31 +135,30 @@ footer {
     color: white;
 }
 
-/* Mobile View */
+/* Mobile View Styles */
 @media (max-width: 768px) {
     .hamburger {
-        display: flex;                 /* Show hamburger menu on mobile */
+        display: flex;
     }
 
     .nav-links {
-        display: none;                 /* Hide nav links initially on mobile */
-        flex-direction: column;        /* Stack nav links vertically */
-        background-color: #333;        /* Dark background for the mobile menu */
+        display: none;
+        flex-direction: column;
+        background-color: #333;
         position: absolute;
-        top: 60px;                     /* Match navbar height */
+        top: 30px;
         left: 0;
-        width: 100%;
-        padding: 1rem 0;
+        width: 50%;
+        padding: 1rem;
     }
 
     .nav-links.active {
-        display: flex;                 /* Show nav links when menu is open */
+        display: flex;
     }
 
     .nav-links li {
         margin: 10px 0;
     }
-}
 
     section {
         padding: 30px 10px;
